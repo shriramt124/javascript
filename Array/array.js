@@ -43,19 +43,60 @@ Adds all the elements of an array into a string, separated by the specified sepa
 @param separator — A string used to separate one element of the array from the next in the resulting string. 
 If omitted, the array elements are separated with a comma.
 */
-console.log(fruits)
-console.log(newaray)
-console.log(typeof newaray)
+//console.log(fruits)
+//console.log(newaray)
+//console.log(typeof newaray)
 
 //slice or splice
-console.log("A ",myarr);
+//console.log("A ",myarr);
 const myn1 = myarr.slice(1,3)//yahan pe 1 se 3[excluded] tak vlaues print ho jayegi
-console.log(myn1)
-console.log("B ",myarr)
+//console.log(myn1)
+//console.log("B ",myarr)
 
 const myn2 = myarr.splice(1,3);
 console.log(myn2)
-console.log("c ",myarr)
+//console.log("c ",myarr)
 
 //bhai splice se original array change ho jati hai jabki slice se original array change nahi hoti hai
+
+const marvel = ["thor","ironman","spiderman"]
+const dc = ["superman","flash","batman"]
+//[ 'thor', 'ironman', 'spiderman', [ 'superman', 'flash', 'batman' ] ]
+//marvel.push(dc);
+//console.log(marvel)//array ke andar arrya aa gaya yahan pe array ke single element hai 
+//console.log(marvel[3])
+
+const mynewarray = marvel.concat(dc)
+console.log(mynewarray)//isse pura array merge ho gaya
+
+const allnewheros = [...marvel,...dc] //... called as spread operator
+console.log(allnewheros)
+
+const anotherarray = [1,2,3,[4,5,6],7,[8,9]]
+/* 
+Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+*/
+let realarray = anotherarray.flat(Infinity)
+console.log(realarray)
+
+
+console.log(Array.isArray("ram"))//ye array nahi hai 
+console.log(Array.from("ram"));//uper wali value array nahi thi to isse wo array ban gayi
+
+console.log(Array.from({name:"shriram"}))//very intresting situation
+//abhi to ye empty array dega isko batana padega ki array keys ka banana hai ki values ka
+
+//multiple variables ko arrays me convert karna
+
+let score1  =100
+let score2 = 200
+let score3 = 300
+let score4 = 400
+console.log(Array.of(score1,score2,score3,score4))//sare individual elements array me convert ho gayi
+
+
+
+ 
+
+
 
