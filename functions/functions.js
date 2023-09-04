@@ -90,4 +90,6 @@ function retursecondvalue(getarr){
 return getarr[2]
 }
 console.log(retursecondvalue(myarr))//function ke andar array bhi paas kar sakte hain
+//function me scoping bhi hoti hai
+
 
