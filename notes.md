@@ -21,6 +21,7 @@ basic 7 types
  3. functions
 
  # javascript is dynamically typed language
+ # javascript is a single threaded yahan har cheez javascript ke liye ek process hota hai
  1. JavaScript is a dynamically typed language, which means that data types of variables are determined by the value they hold at   runtime and can change throughout the program as we assign different values to them.
  2. seedhi baat ye hai ki kisi bhi value ko declare karne ke liye hame uska data type batane ki jarurat nahi hai to dynamically typed hai
  
@@ -44,3 +45,35 @@ basically there are two types of memory
 # non-primitive data type me --> heap memory
  jab bhi stack memory use hoti hai to jo bhi variable aapne declare kiya hai uski ek copy milti hai
  --> agar koi memory heap ke andar define hoti hai to wahan se original value ka refrence milta hai
+
+# imidiately invoked function in javascript 
+
+A JavaScript immediately invoked function expression is a function defined as an expression and executed immediately after creation. The following shows the syntax of defining an immediately invoked function expression:
+
+(function(){
+    //...some code
+})();
+
+
+ # Why IIFEs
+When you define a function, the JavaScript engine adds the function to the global object. See the following example:
+
+function add(a,b) {
+    return a + b;
+}
+Code language: JavaScript (javascript)
+In web browsers, the JavaScript engine adds the add() function to the window global object:
+
+console.log(window.add);
+Code language: JavaScript (javascript)
+Likewise, if you declare a variable outside of a function using the var keyword, the JavaScript engine also adds the variable to the global object:
+
+var counter = 10;
+console.log(window.counter); // 10
+Code language: JavaScript (javascript)
+If you have many global variables and functions, then JavaScript engine will only release the memory allocated for them until the global object loses its scopes.
+
+As a result, the script may use the memory inefficiently. On top of that, having global variables and functions will likely cause name collisions.
+
+One way to prevent the functions and variables from polluting the global object is to use immediately invoked function expressions.
+
