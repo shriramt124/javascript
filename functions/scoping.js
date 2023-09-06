@@ -117,3 +117,53 @@ const chai = ()=>{
     console.log(this.username)//yahan bhi undefined aayega
 }
 chai()
+
+
+const addtwoagain = (num1,num2)=>{
+    return num1+num2;
+}
+console.log(addtwoagain(5,6));
+
+//we can write in another way called implicit return 
+//matlab wo apne aap hi return kar dega hame batane ki jarurart hi nahi hai
+
+const newadd = (num1,num2) =>(num1+num2);//he hai implicit return
+////ye parenthesis use karna jaruri hai kunki kabhi object return karna hai to wo bina parenthesis ke return hi nahi hoga
+//man lo hame object return karna hai
+console.log(newadd(4,5));
+
+//object return example
+const retobject = ()=>({usename:"shriram tiwari"});
+console.log(retobject());
+
+
+
+
+/* 
+let sum = (a, b) => a + b;
+
+/* This arrow function is a shorter form of:
+
+let sum = function(a, b) {
+  return a + b;
+};
+
+//alert( sum(1, 2) ); 3
+*/
+
+
+/* 
+If there are no arguments, parentheses are empty, but they must be present:
+
+let sayHi = () => alert("Hello!");
+
+sayHi();
+
+*/
+
+
+/* 
+However, this is not associated with arrow functions. 
+Arrow function does not have its own this. So whenever you call this, it refers to its parent scope. 
+
+*/
