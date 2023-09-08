@@ -92,4 +92,35 @@ return getarr[2]
 console.log(retursecondvalue(myarr))//function ke andar array bhi paas kar sakte hain
 //function me scoping bhi hoti hai
 
+ //arguments object array function me nahi hai 
 
+ function add(){
+    console.log(arguments);
+ }
+add(10,20,30);
+
+let add1 = ()=>(console.log(arguments))//ye arguments object ham array function me nhi use kar sakte
+add1(20,39)
+
+//binding of this 
+const person = {
+    name:"ram",
+    greet:function(){
+      console.log(`hello my name is ${this.name}`)
+    },
+    greet1:()=>{
+        console.log(`hello my name is ${this.name}`)//iska khud ka this nahi hai to ye apne parents ka this le lega
+    }
+
+}
+person.greet();
+person.greet1();
+//new keyword ko array function ke saath use nahi kar sakte
+
+function RegularFunciton(name){//normal function ko constructor ki tarrah use kar sakte hain 
+    this.name = name;
+}
+const Regularobject= new RegularFunciton('ram')
+console.log(Regularobject)
+
+//arrow function ko constructor ki tarrah nahi use kar sakte to isme ham new keyword nahi use kar sakte

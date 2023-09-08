@@ -44,7 +44,7 @@ function addone(num){
 //console.log(addone(5))
 
 
-//console.log(addtwo(3))//yahan pe errow aayega matlab declaration se pahle usko use nahi kar sakte
+//console.log(addtwo(3))//yahan pe error aayega matlab declaration se pahle usko use nahi kar sakte
 const addtwo = function(num){
     return num+2;
 }

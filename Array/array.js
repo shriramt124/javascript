@@ -56,7 +56,7 @@ const myn1 = myarr.slice(1,3)//yahan pe 1 se 3[excluded] tak vlaues print ho jay
 const myn2 = myarr.splice(1,3);
 console.log(myn2)
 //console.log("c ",myarr)
-
+ 
 //bhai splice se original array change ho jati hai jabki slice se original array change nahi hoti hai
 
 const marvel = ["thor","ironman","spiderman"]
@@ -94,8 +94,13 @@ let score3 = 300
 let score4 = 400
 console.log(Array.of(score1,score2,score3,score4))//sare individual elements array me convert ho gayi
 
-
-
+let numbers = [10,20,30]
+numbers.push(54);
+numbers.push(56)
+let popitem = numbers.pop()
+console.log("popped item is : "+popitem)
+console.log(numbers)
+ 
  
 
 

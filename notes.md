@@ -11,7 +11,7 @@
 # Primitive
 basic 7 types
 1.string 2.Number 3.Boolean 4.null 5.undefined 6.symbol 7.bigint
-# primitive data types ka refrence memory me directly allocate nahi hota hai yahan pe value ki ek copy pass hoti hai naki refrence 
+# primitive data types ka refrence, memory me directly allocate nahi hota hai yahan pe value ki ek copy pass hoti hai naki refrence 
 # kisi bhi value ko unique banane ke liye symbol ka use hota hai
 
 # non primitive data type------>also known as refrence type
@@ -20,7 +20,7 @@ basic 7 types
  2. objects
  3. functions
 
- # javascript is dynamically typed language
+ # j avascript is dynamically typed language
  # javascript is a single threaded yahan har cheez javascript ke liye ek process hota hai
  1. JavaScript is a dynamically typed language, which means that data types of variables are determined by the value they hold at   runtime and can change throughout the program as we assign different values to them.
  2. seedhi baat ye hai ki kisi bhi value ko declare karne ke liye hame uska data type batane ki jarurat nahi hai to dynamically typed hai
