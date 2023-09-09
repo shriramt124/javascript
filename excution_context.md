@@ -49,4 +49,4 @@ Asynchronous means the JavaScript engine can execute other tasks while waiting f
 2.Display a spinner
 3.When the data is available, display it on the webpage.
 
-To do this, the JavaScript engine uses an event loop, 
+To do this, the JavaScript engine uses an event loop,
