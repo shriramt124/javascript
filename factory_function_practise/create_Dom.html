@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1>crating dom element using factory function</h1> 
+
+</body>
+<script>
+     
+    const createElement = (type,content,parentId) =>{
+        //creating element
+        const element = document.createElement(type)
+        element.innerHTML = content;
+        document.body.appendChild(element)
+        //creating element ends
+        
+         return {
+            type,
+            content,
+            updateContent(newcontent){
+                element.innerHTML = newcontent;
+            },
+            addClass(newclass){
+                element.classList.add(newclass)
+            },
+            getclassName(){
+                return element.className;
+            },
+         };
+
+    }
+   const heading = createElement('h1','my name is ram','body');
+   console.log(heading)
+   const paragraph = createElement('p','this is paragraph','body');
+    
+   heading.addClass('classadded');
+   heading.updateContent('this is updated content');
+   console.log(heading.getclassName())
+
+
+</script>
+</html>
