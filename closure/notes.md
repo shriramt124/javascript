@@ -2,7 +2,29 @@
 In other words, a closure gives you access to an outer function's scope from an inner function.
  In JavaScript, closures are created every time a function is created, at function creation time.
 
-# Nested functions have access to variables declared in their outer scope.
+ ### A closure is created when:
+A function is defined inside another function (a nested function).
+The inner function references variables from the outer function's scope.
+
+* Nested functions have access to variables declared in their outer scope.
+`function outerFunction() {
+  let outerVariable = "Hiiii!";
+
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+  
+  return innerFunction;
+}
+
+const inner = outerFunction();
+inner(); // logs "Hiiii!" to the console`
+
+In this example, innerFunction has access to outerVariable, even though it's not defined inside the innerFunction itself. This is because innerFunction closes over outerVariable, creating a closure that allows it to access the variable's value even after outerFunction has finished executing.
+
+## setTimeout + closure
+
+
  
 # Getters and Setters
 When writing code in a team, you want to limit who can change certain parts of the codebase to avoid bugs. It is advisable that in OOP, certain variables and properties should be hidden when necessary.
